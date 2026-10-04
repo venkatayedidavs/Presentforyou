@@ -5,7 +5,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 
 export const metadata: Metadata = {
-  title: "Give a domain",
+  title: "Start a gift",
 }
 
 export default function GivePage() {
@@ -14,7 +14,7 @@ export default function GivePage() {
 
   return (
     <Shell>
-      <main className="mx-auto w-full max-w-3xl px-5 py-10">
+      <main className="mx-auto w-full max-w-2xl px-4 py-12 sm:px-6 sm:py-16">
         <GiveWizard offering={offering} />
       </main>
     </Shell>

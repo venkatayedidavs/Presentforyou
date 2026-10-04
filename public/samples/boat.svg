@@ -1,8 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
-  <rect width="800" height="600" fill="#e7efe8"/>
-  <rect y="340" width="800" height="260" fill="#8fb4c4"/>
-  <path d="M250 360 L400 470 L550 360 Z" fill="#f4efe4"/>
-  <path d="M400 250 V390" stroke="#1e4638" stroke-width="8"/>
-  <path d="M400 250 L520 340 H400 Z" fill="#b85c38"/>
-  <circle cx="160" cy="140" r="46" fill="#f0d7a2"/>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c9d7de"/>
+      <stop offset="58%" stop-color="#efe8dc"/>
+      <stop offset="100%" stop-color="#f6f1e6"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9aafb6"/>
+      <stop offset="100%" stop-color="#6d8b96"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <circle cx="612" cy="118" r="28" fill="#e6d3a4"/>
+  <path d="M0 312 C90 292 150 328 250 314 C390 294 470 330 620 308 C700 298 760 318 800 310 V352 H0 Z" fill="#1e3c34"/>
+  <rect y="338" width="800" height="262" fill="url(#water)"/>
+  <path d="M0 392 H800" stroke="#f7f4ee" stroke-width="1" opacity="0.35"/>
+  <path d="M40 470 H760" stroke="#f7f4ee" stroke-width="1" opacity="0.2"/>
+  <g transform="translate(286 348)">
+    <path d="M18 78 C70 118 150 118 202 78 C150 98 70 98 18 78 Z" fill="#1c1915" opacity="0.12"/>
+    <path d="M28 46 L110 86 L192 46 Z" fill="#f7f3ea"/>
+    <path d="M110 46 L110 86" stroke="#ddd2c2" stroke-width="1.5"/>
+    <path d="M62 54 L110 78 L110 54 Z" fill="#efe4d4"/>
+    <path d="M110 12 V52" stroke="#1c1915" stroke-width="2"/>
+    <path d="M110 16 L162 48 H110 Z" fill="#1f3d34"/>
+  </g>
+  <path d="M360 470 C400 500 440 500 480 470" fill="none" stroke="#f4efe6" stroke-width="1.2" opacity="0.35"/>
 </svg>

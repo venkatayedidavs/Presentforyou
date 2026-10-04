@@ -12,6 +12,10 @@ const PRICES: Record<string, number> = {
   fun: 600,
 }
 
+export function listedDomainPrices(): { tld: string; cents: number }[] {
+  return Object.entries(PRICES).map(([tld, cents]) => ({ tld, cents }))
+}
+
 const DOMAIN_PATTERN =
   /^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+(?:com|site|fun)$/
 

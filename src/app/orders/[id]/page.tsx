@@ -29,32 +29,31 @@ export default async function OrderPage({
 
   return (
     <Shell>
-      <main className="mx-auto w-full max-w-2xl px-5 py-14">
-        <p className="text-sm font-medium text-primary">Published</p>
-        <h1 className="mt-2 font-serif text-4xl tracking-tight">The site is up.</h1>
-        <p className="mt-4 text-muted-foreground">
-          {order.domain} is recorded as registered. The greeting site was created with no further step.
-          A real registrar would point the domain at this site. Here, the mock registrar stores the
-          registration and the site is served on this machine.
+      <main className="mx-auto w-full max-w-2xl px-4 py-14 sm:px-6">
+        <p className="text-[0.7rem] font-semibold tracking-[0.16em] text-primary uppercase">Receipt</p>
+        <h1 className="mt-3 font-serif text-4xl font-medium tracking-tight sm:text-5xl">The site is published.</h1>
+        <p className="mt-4 leading-7 text-muted-foreground">
+          {order.domain} is recorded as registered. The greeting site is up. A live registrar would point the domain
+          at this site. Here, the registration is stored on this machine and the site is served from it.
         </p>
-        <dl className="mt-8 space-y-3 text-sm">
-          <div>
+        <dl className="mt-10 divide-y divide-border border-y border-border text-sm">
+          <div className="grid grid-cols-[8rem_1fr] gap-3 py-3">
             <dt className="text-muted-foreground">Domain</dt>
             <dd className="font-medium">{order.domain}</dd>
           </div>
-          <div>
-            <dt className="text-muted-foreground">Recorded price</dt>
+          <div className="grid grid-cols-[8rem_1fr] gap-3 py-3">
+            <dt className="text-muted-foreground">Price</dt>
             <dd>{formatPrice(priceCents(order.domain))} for one year, not charged</dd>
           </div>
-          <div>
+          <div className="grid grid-cols-[8rem_1fr] gap-3 py-3">
             <dt className="text-muted-foreground">Purpose</dt>
             <dd>{purpose?.label ?? order.purposeId}</dd>
           </div>
-          <div>
+          <div className="grid grid-cols-[8rem_1fr] gap-3 py-3">
             <dt className="text-muted-foreground">Game</dt>
             <dd>{option?.name ?? order.gameId}</dd>
           </div>
-          <div>
+          <div className="grid grid-cols-[8rem_1fr] gap-3 py-3">
             <dt className="text-muted-foreground">Greeting</dt>
             <dd>{order.greeting}</dd>
           </div>
@@ -63,11 +62,8 @@ export default async function OrderPage({
           <Link href={sitePath(order.domain)} className={buttonVariants({ className: "h-11 px-5" })}>
             Open the site
           </Link>
-          <Link
-            href="/sites"
-            className={buttonVariants({ variant: "outline", className: "h-11 px-5" })}
-          >
-            All sites on this machine
+          <Link href="/sites" className={buttonVariants({ variant: "outline", className: "h-11 px-5" })}>
+            All published sites
           </Link>
         </div>
       </main>

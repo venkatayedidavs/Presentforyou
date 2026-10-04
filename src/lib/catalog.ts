@@ -43,34 +43,34 @@ const offerings: Offering[] = [
     id: GREETING_SITE_ID,
     name: "Greeting site",
     summary:
-      "A short greeting, a small game, and a few photos on a domain you give.",
+      "Their own domain, a greeting, a short game, and a few photos.",
     detail:
-      "This is the first site Given can publish. It is the version a parent gives a child: their own domain, a greeting, a game made for them, and photos underneath.",
+      "The gift a parent gives a child: an address on the web, a note in your words, one game that uses their name, and photographs under the game. Checkout records the domain and publishes the site immediately.",
     purposes: [
       {
         id: "birthday",
         label: "Birthday gift for my kid",
-        description: "A birthday greeting and a short game on their domain.",
+        description: "A birthday note on their domain, and a short game to play there.",
         greeting: "{recipient}, this domain is yours. Happy birthday. — {from}",
         options: [
           {
             id: "balloon-pop",
             gameId: "balloon-pop",
             name: "Balloon pop",
-            description: "Pop a handful of balloons with their name on the board.",
+            description: "Eight balloons over a quiet hill. Pop every one.",
           },
           {
             id: "candle-count",
             gameId: "candle-count",
             name: "Candle count",
-            description: "Light five candles for them.",
+            description: "A cake in a dark room. Light exactly five candles.",
           },
         ],
       },
       {
         id: "first-day",
         label: "First day of school",
-        description: "A send-off for the first day, with a small game to play.",
+        description: "A send-off for the first morning, with a game on the page.",
         greeting:
           "{recipient}, this domain is yours. Have a good first day. — {from}",
         options: [
@@ -78,33 +78,33 @@ const offerings: Offering[] = [
             id: "letter-catch",
             gameId: "letter-catch",
             name: "Letter catch",
-            description: "Spell their name from a tray of letters.",
+            description: "Letter tiles on a desk. Spell their name in order.",
           },
           {
             id: "pack-bag",
             gameId: "pack-bag",
             name: "Pack the bag",
-            description: "Choose what goes in a school bag.",
+            description: "Pack the school things. Leave the rest at home.",
           },
         ],
       },
       {
         id: "just-because",
         label: "Just because",
-        description: "No occasion. A domain and a site, given because you wanted to.",
+        description: "No occasion. A domain and a site, because you wanted to give one.",
         greeting: "{recipient}, this domain is yours. — {from}",
         options: [
           {
             id: "memory-match",
             gameId: "memory-match",
             name: "Memory match",
-            description: "Turn over three pairs of cards.",
+            description: "Three pairs on a felt table. Turn them and match them.",
           },
           {
             id: "color-tiles",
             gameId: "color-tiles",
             name: "Color tiles",
-            description: "Fill a small board with color.",
+            description: "Sixteen tiles and four glazes. Fill the board.",
           },
         ],
       },
