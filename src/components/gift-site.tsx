@@ -30,37 +30,48 @@ export function GiftSite({
   }, [])
 
   return (
-    <article className="mx-auto w-full max-w-3xl px-5 py-10 sm:py-14">
-      <p className="text-sm text-muted-foreground">{domain}</p>
-      <h1 className="mt-3 max-w-2xl font-serif text-4xl leading-tight text-foreground sm:text-5xl">
+    <article className="mx-auto w-full max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
+      <p className="text-[0.68rem] font-semibold tracking-[0.16em] text-muted-foreground uppercase">{domain}</p>
+      <h1 className="mt-4 max-w-3xl font-serif text-4xl leading-[1.12] font-medium tracking-tight text-foreground sm:text-6xl">
         {greeting}
       </h1>
-      <p className="mt-4 text-muted-foreground">
-        A short game for {recipientName}, then a few photos.
+      <p className="mt-5 max-w-xl text-base leading-7 text-muted-foreground">
+        A game for {recipientName}, then a few photographs.
       </p>
 
-      <section className="mt-10" aria-label={gameName}>
+      <section className="mt-12" aria-label={gameName}>
+        <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+          <h2 className="font-serif text-3xl font-medium tracking-tight">{gameName}</h2>
+          <p className="text-sm text-muted-foreground">Finish the game and the photographs follow.</p>
+        </div>
         {knownGame ? (
           <PlayGame gameId={knownGame} recipientName={recipientName} onComplete={onComplete} />
         ) : (
           <p className="rounded-xl border border-border p-4 text-sm">This game is not available.</p>
         )}
         {played ? (
-          <p className="mt-4 text-sm text-primary">The game is done. The photos are below.</p>
+          <p className="mt-4 text-sm text-primary">Done. The photographs are below.</p>
         ) : null}
       </section>
 
-      <section ref={photosRef} className="mt-12 scroll-mt-6" aria-label="Photos">
-        <h2 className="font-serif text-3xl">Photos</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          These sit under the game. Sample pictures are stand-ins until a parent uploads their own.
+      <section ref={photosRef} className="mt-16 scroll-mt-24" aria-label="Photos">
+        <h2 className="font-serif text-3xl font-medium tracking-tight">Photographs</h2>
+        <p className="mt-2 max-w-xl text-sm leading-6 text-muted-foreground">
+          They sit under the game. The sample set is three illustrations, until a parent uploads their own.
         </p>
-        <ul className="mt-5 grid gap-4 sm:grid-cols-3">
+        <ul className="mt-6 grid gap-6 sm:grid-cols-3">
           {photos.map((photo) => (
-            <li key={photo.id} className="overflow-hidden rounded-2xl border border-border bg-card">
-              {/* User uploads are data URLs; next/image cannot optimize them. */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={photo.src} alt={photo.alt} className="aspect-[4/3] w-full object-cover" />
+            <li key={photo.id}>
+              <figure className="overflow-hidden">
+                {/* User uploads are data URLs; next/image cannot optimize them. */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="aspect-[4/3] w-full rounded-lg border border-border object-cover"
+                />
+                <figcaption className="mt-2 text-sm text-muted-foreground">{photo.alt}</figcaption>
+              </figure>
             </li>
           ))}
         </ul>

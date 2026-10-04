@@ -1,7 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
-  <rect width="800" height="600" fill="#f3ecdf"/>
-  <rect x="180" y="80" width="440" height="360" rx="8" fill="#c5d5df"/>
-  <path d="M400 80 V440 M180 260 H620" stroke="#f7f3ea" stroke-width="18"/>
-  <rect x="120" y="470" width="560" height="28" fill="#1e4638"/>
-  <circle cx="620" cy="150" r="36" fill="#e2b15a"/>
+  <defs>
+    <linearGradient id="pane" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d5e2e8"/>
+      <stop offset="100%" stop-color="#f3ead8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#efeae3"/>
+  <rect y="470" width="800" height="130" fill="#e4d9cc"/>
+  <path d="M250 470 L430 560 H190 Z" fill="#f7f1e4" opacity="0.9"/>
+  <path d="M150 70 C150 150 130 280 118 470 H196 C188 300 196 150 198 70 Z" fill="#e3d3c2"/>
+  <rect x="230" y="78" width="390" height="360" fill="#1c1915"/>
+  <rect x="246" y="94" width="170" height="150" fill="url(#pane)"/>
+  <rect x="434" y="94" width="170" height="150" fill="url(#pane)"/>
+  <rect x="246" y="262" width="170" height="150" fill="#e7eef1"/>
+  <rect x="434" y="262" width="170" height="150" fill="#e7eef1"/>
+  <rect x="214" y="438" width="422" height="16" fill="#1c1915"/>
+  <g transform="translate(470 392)">
+    <path d="M28 46 h36 a8 8 0 0 1 8 8 v4 H20 v-4 a8 8 0 0 1 8 -8 Z" fill="#1f3d34"/>
+    <path d="M46 46 C46 28 58 18 58 18 C48 20 34 30 34 46 Z" fill="#2f5346"/>
+    <path d="M46 46 C40 24 24 22 24 22 C30 30 34 40 36 46 Z" fill="#3d6354"/>
+  </g>
+  <circle cx="640" cy="150" r="22" fill="#e6d3a4" opacity="0.9"/>
 </svg>
